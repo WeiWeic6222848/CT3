@@ -9,7 +9,7 @@ positiveJudgement = pairJudgement.groupby(by=["movieId", "neighborId"]) \
     .groupby(by=["movieId", "neighborId"]) \
     .mean()
 
-positiveJudgement = positiveJudgement[positiveJudgement.sim > 3].groupby(
-    by=["movieId"]).filter(lambda x: len(x) >= 4)
-print(positiveJudgement.groupby(
-    by=["movieId"]).count())
+positiveJudgement = positiveJudgement[positiveJudgement.sim >= 2].groupby(
+    by=["movieId"]).filter(lambda x: len(x) > 4)
+
+print(positiveJudgement.groupby(by=["movieId"]).count().mean())
