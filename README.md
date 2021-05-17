@@ -1,3 +1,5 @@
+original code: https://github.com/microsoft/debiasing-item2item
+
 # Debiasing Item-to-Item Recommendations With Small Annotated Datasets
 This is the code for our RecSys '20 paper. Other materials can be found here:
 
